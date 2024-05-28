@@ -9,6 +9,7 @@
 body{
     scroll-behavior: smooth;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 .header-left img{
@@ -109,5 +110,10 @@ main{
     opacity: 0;
     transform: translateX(100px);
     transition: opacity 5s ease-out, transform 2s ease-out;
+}
+
+.card img{
+    height:100px;
+    width:200px;
 }
 

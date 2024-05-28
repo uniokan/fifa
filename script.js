@@ -12,6 +12,7 @@ async function getData() {
         const respone = await fetch(URL_FIFA);
         const result = await respone.json();
         console.log(result);
+        renderCards(result);
     } catch (error) {
         console.log(error);
     }
@@ -19,7 +20,7 @@ async function getData() {
 
 
 function moveTextToWindow() {
-    window.addEventListener('scroll', function () {
+    window.addEventListener('scroll', () => {
         const hiddenTexts = document.querySelectorAll('.hidden-text');
         const hiddenTextRight = document.querySelectorAll('.hidden-text-right');
         hiddenTexts.forEach(hiddenText => {
@@ -34,11 +35,17 @@ function moveTextToWindow() {
 }
 
 function checkWindowInnerHeight(rect,hiddenText){
-    if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        hiddenText.classList.add('visible');
-    }
+    rect.top <= window.innerHeight && rect.bottom >= 0?
+    hiddenText.classList.add('visible'): hiddenText.classList.remove('visible');
+}
 
-    else{
-        hiddenText.classList.remove('visible');
+function renderCards(data){
+    let country = document.getElementById('all-countries');
+    console.log(data['data']);
+    for (i=0; i<data['data'].length; i++){
+        country.innerHTML+= `
+        <div class="card"> 
+            <img src="${data['data'][i]['image_path']}">
+        </div>`
     }
 }
