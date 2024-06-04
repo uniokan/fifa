@@ -9,6 +9,11 @@
     .wm-main-describe h1{
         font-size: 24px;
     }
+
+    footer{
+        flex-direction: column;
+        gap:16px;
+    }
 }
 
 @media (max-width:1250px){
@@ -16,7 +21,6 @@
     .history-responsive-container{
         position: relative;
         font-size: 18px;
-        
     }
 
     .p-right img {
@@ -52,6 +56,14 @@
         display:flex !important;
         justify-content: space-between;
     }
+
+    .contact-text {
+        font-size: 22px;
+    }
+
+    .contact-text button{
+        font-size: 16px;
+    }
 }
 
 @media (max-width:860px){
@@ -59,11 +71,17 @@
         flex-direction: column;
         margin-top:50px;
     }
-
-    
 }
 
 @media (max-width:550px){
+    .contact-text {
+        font-size: 18px;
+    }
+
+    .contact-text button{
+        font-size: 16px;
+    }
+
     .history-container p {
         width: 280px ;
         font-size: 14px;

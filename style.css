@@ -147,7 +147,8 @@ main {
     transform: rotateY(180deg);
     flex-direction: column;
     padding-left:16px;
-    color:white;
+    color:white !important;
+
 }
 
 .card:hover img {
@@ -199,3 +200,83 @@ main {
     cursor: pointer;
 }
 
+.contact{
+    height:100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url("img/stadium.jpg") no-repeat center center;
+    background-size: cover;
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 32px;
+}
+
+.contact-text{
+    box-shadow: 10px 10px 10px 10px rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding: 16px 32px 0 32px;
+    margin: 0 40px 0 32px;
+    border-radius: 20px;
+}
+
+.contact-text button{
+    padding: 10px 50px;
+    margin: 30px 0px;
+    background-color: rgb(138,21,56);
+    color:white;
+    font-weight: bold;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: all 225ms ease-in-out;
+    cursor: pointer;
+
+    &:hover{
+        color:orange;
+    }
+}
+
+footer img{
+    height:50px;
+}
+
+footer{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 5%;
+    background-color: rgb(138,21,56);
+}
+
+footer a{
+    color:white;
+    text-decoration: none;
+    transition: all 225ms ease-in-out;
+
+    &:hover{
+        color:orange;
+    }
+}
+
+.community img{
+    margin-left:8px;
+    height:30px;
+    object-fit: cover;
+}
+
+.imprint{
+    display:flex;
+    flex-direction: column;
+
+}
+
+.contact-text{
+    transform: translateX(-100vw) translateY(-150px);
+}
+
+.contact-text.visible{
+    transition: transform 2s ease-in-out;
+    transform: translateX(0) translateY(0);
+
+}

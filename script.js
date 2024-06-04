@@ -6,6 +6,7 @@ function init() {
     moveTextToWindow();
     getData();
     showCardsWithOpacity();
+    moveContactTextToWindow();
 }
 
 
@@ -25,6 +26,7 @@ function moveTextToWindow() {
     window.addEventListener('scroll', () => {
         const hiddenTexts = document.querySelectorAll('.hidden-text');
         const hiddenTextRight = document.querySelectorAll('.hidden-text-right');
+
         hiddenTexts.forEach(hiddenText => {
             const rect = hiddenText.getBoundingClientRect();
             checkWindowInnerHeight(rect, hiddenText);
@@ -36,9 +38,20 @@ function moveTextToWindow() {
     });
 }
 
+function moveContactTextToWindow() {
+    window.addEventListener('scroll', () => {
+        const text = document.querySelector('.contact-text');
+        const rect = text.getBoundingClientRect();
+        checkWindowInnerHeight(rect, text);
+    })
+}
+
 function checkWindowInnerHeight(rect, hiddenText) {
     rect.top <= window.innerHeight && rect.bottom >= 0 ?
         hiddenText.classList.add('visible') : hiddenText.classList.remove('visible');
+    console.log('r' + rect.top);
+    console.log('w' + window.innerHeight);
+
 }
 
 function renderCards(data) {
@@ -70,26 +83,26 @@ function checkWindowInnerHeightForCards(rect, card) {
 function switchTextRight() {
     let text = document.querySelectorAll('.history-container');
 
-    if (currentIndex<=1){
-    text[currentIndex].classList.remove('active');
-    text[currentIndex].classList.add('hidden-left');
+    if (currentIndex <= 1) {
+        text[currentIndex].classList.remove('active');
+        text[currentIndex].classList.add('hidden-left');
 
-    text[currentIndex+1].classList.remove('hidden-right');
-    text[currentIndex+1].classList.add('active');
-    currentIndex++;
+        text[currentIndex + 1].classList.remove('hidden-right');
+        text[currentIndex + 1].classList.add('active');
+        currentIndex++;
     }
 
 }
 function switchTextLeft() {
     let text = document.querySelectorAll('.history-container');
 
-    if (currentIndex>0){
-    text[currentIndex].classList.remove('active');
-    text[currentIndex].classList.add('hidden-right');
+    if (currentIndex > 0) {
+        text[currentIndex].classList.remove('active');
+        text[currentIndex].classList.add('hidden-right');
 
-    text[currentIndex-1].classList.remove('hidden-left');
-    text[currentIndex-1].classList.add('active');
-    currentIndex--;
+        text[currentIndex - 1].classList.remove('hidden-left');
+        text[currentIndex - 1].classList.add('active');
+        currentIndex--;
     }
 
 }
