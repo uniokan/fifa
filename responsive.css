@@ -92,6 +92,11 @@
         flex-direction: column;
         margin-top:50px;
     }
+
+    .body-data-protection,
+    .imprint-page{
+        padding-top:15%;
+    }
 }
 
 @media (max-width:700px){
@@ -168,4 +173,13 @@
     .h1-contact{
         margin-bottom: 30px;
     }
+
+    .body-data-protection,
+    .imprint-page{
+        padding-top:18%;
+    }
+
+    .body-data-protection h1{
+        font-size: 26px;
+    } 
 }

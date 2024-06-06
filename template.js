@@ -9,8 +9,7 @@ const translationsToEN = {
     "Für mehr Informationen kannst Du uns gerne kontaktieren!":"For more information, please feel free to contact us!",
     "Kontakt":"Contact",
     "Land:":"Country:",
-    "Offizieller Name:":"Official name:",
-    "Bei Fragen oder Wünschen können Sie mich anrufen oder per Formular anschreiben":"If you have any questions or requests, you can call me or write to me using the form"
+    "Offizieller Name:":"Official name:"
 
 };
 
@@ -23,8 +22,8 @@ const translationsToGER = {
     "For more information, please feel free to contact us!":"Für mehr Informationen kannst Du uns gerne kontaktieren!",
     "Contact":"Kontakt",
     "Country":"Land",
-    "Official name":"Offizieller Name",
-    "If you have any questions or requests, you can call me or write to me using the form":"Bei Fragen oder Wünschen können Sie mich anrufen oder per Formular anschreiben"
+    "Official name":"Offizieller Name"
+    
 };
 
 const textAEN = `<b>History </b> <br>The first World Cup took place in Uruguay in 1930. At that time, 13 teams took part and Uruguay became the first world champions. Since then, the tournament has evolved and expanded significantly, both in terms of the number of teams participating and its global reach. In 1998, the tournament expanded to 32 teams, allowing teams from more regions of the world to participate`;

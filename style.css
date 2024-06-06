@@ -1,7 +1,3 @@
-/* :root{
-
-} */
-
 * {
     margin: 0;
 }
@@ -303,4 +299,9 @@ iframe{
     flex-direction: column;
     gap:50px;
     padding-top:30px;
+}
+
+.body-data-protection,
+.imprint-page{
+    padding: 8% 5% 5% 5%;
 }
