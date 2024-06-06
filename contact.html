@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EA Sports</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./img/fifa.png" type="image/x-icon">
+    <script src="script.js"></script>
+    <script src="template.js"></script>
+    <script src="translate.js"></script>
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header class="contact-header">
+        <div class="header-left">
+            <img src="./img/fifa.png" alt="FIFA LOGO">
+            <span>EA sports</span>
+        </div>
+
+        <div class="header-right">
+            <img onclick="trannslatePageToGER()" src="./img/germany_flag.png" alt="Deutsche Sprache">
+            <img onclick="translatePageToEN()" src="./img/england_flag.png" alt="Englische Sprache">
+        </div>
+
+    </header>
+
+    <h1 class="h1-contact">Kontakt</h1>
+    <section class="contact-section">
+
+        <div class="contact-left">
+            <p><b>Bei Fragen oder Wünschen können Sie mich anrufen oder per Formular anschreiben</p></b>
+            <p class="my-data-contact">
+                <span>Okan Özel</span>
+                <a href="tel:0716321282181">0716321282181</a>
+                <a href="mailto:okan.ozel@hotmail.de">okan.ozel@hotmail.de</a>
+            </p>
+        </div>
+
+        <form onsubmit="sendMail()">
+            <div class="email-name-container">
+                <div class="flex-column">
+                    <span>Namen eingeben*</span>
+                    <input type="text" placeholder="Vorname" required>
+                </div>
+                <div class="flex-column">
+                    <span>E-Mail-Adresse eingeben*</span>
+                    <input type="email" placeholder="E-Mail-Adresse" required>
+                </div>
+            </div>
+            <div class="flex-column">
+                <span>Telefonnummer eingeben</span>
+                <input placeholder="Telefonnummer">
+            </div>
+            <div class="flex-column">
+                <span>Nachricht eingeben*</span>
+                <textarea class="contact-textarea" placeholder="Nachricht" required></textarea>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="btn">Abschicken</button>
+            </div>
+        </form>
+
+    </section>
+
+
+
+    <footer class="footer-contact">
+        <div class="imprint">
+            <a href="datenschutz.html"><span>Datenschutz</span></a>
+            <a href="impressum.html"><span>Impressum</span></a>
+        </div>
+
+        <a href="index.html"><img src="img/fifa.png"></a>
+
+        <div class="community">
+            <a href="https://www.facebook.com/"><img src="img/facebook.png"></a>
+            <a href="https://x.com/?lang=de&mx=2"><img src="img/twitter.png"></a>
+            <a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
+        </div>
+    </footer>
+</body>

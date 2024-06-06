@@ -10,6 +10,7 @@ const translationsToEN = {
     "Kontakt":"Contact",
     "Land:":"Country:",
     "Offizieller Name:":"Official name:",
+    "Bei Fragen oder Wünschen können Sie mich anrufen oder per Formular anschreiben":"If you have any questions or requests, you can call me or write to me using the form"
 
 };
 
@@ -22,7 +23,8 @@ const translationsToGER = {
     "For more information, please feel free to contact us!":"Für mehr Informationen kannst Du uns gerne kontaktieren!",
     "Contact":"Kontakt",
     "Country":"Land",
-    "Official name":"Offizieller Name"
+    "Official name":"Offizieller Name",
+    "If you have any questions or requests, you can call me or write to me using the form":"Bei Fragen oder Wünschen können Sie mich anrufen oder per Formular anschreiben"
 };
 
 const textAEN = `<b>History </b> <br>The first World Cup took place in Uruguay in 1930. At that time, 13 teams took part and Uruguay became the first world champions. Since then, the tournament has evolved and expanded significantly, both in terms of the number of teams participating and its global reach. In 1998, the tournament expanded to 32 teams, allowing teams from more regions of the world to participate`;
@@ -36,15 +38,15 @@ const textCGER = "<b>Rekorde und Höhepunkte</b> <br>Brasilien ist mit fünf Tit
 
 ////////////////GET DATA AND RENDER ////////////////////////
 
-function renderCardsHTML(data) {
+function renderCardsHTML(data,i) {
     return `
-    <div class="card hidden-card"> 
+    <div class="card hidden-card" id="a${i}"> 
         <img src="${data['data'][i]['image_path']}">
         <div class="back">
             <span> <b>Land:</b> ${data['data'][i]['name']}</span>
             <span> <b>Offizieller Name:</b> ${data['data'][i]['official_name']}</span>
             <span> <b>Fifa Name:</b> ${data['data'][i]['fifa_name']}</span>
-            
         </div>
-    </div>`
+    </div>
+    `
 }

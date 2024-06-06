@@ -1,0 +1,72 @@
+.contact-text{
+    transform: translateX(-100vw) translateY(-150px);
+}
+
+.contact-text.visible{
+    transition: transform 1.5s ease-in-out;
+    transform: translateX(0) translateY(0);
+}
+
+.contact-section{
+    display:flex;
+    padding: 2% 15%;
+    justify-content: space-around;
+}
+
+.h1-contact{
+    margin-top:150px;
+    text-align: center;
+}
+
+.contact-header{
+    background-color:rgb(138,21,56) ;
+    position: absolute;
+    top:0;
+    right:0;
+    left:0;
+}
+
+.my-data-contact{
+    display:flex;
+    flex-direction: column;
+    line-height: 40px;
+    margin-top:30px;
+}
+
+.contact-left{
+    width:270px;
+}
+
+.footer-contact{
+    position: fixed;
+    bottom:0;
+    right:0;
+    left:0;
+}
+
+.email-name-container{
+    display:flex;
+    gap:16px;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+    margin-bottom: 16px;
+}
+
+.flex-column input{
+    border: unset;
+    border-bottom: 1px solid gray;
+    outline: unset;
+}
+
+.contact-textarea{
+    max-width:380px;
+    min-width: 380px;
+    max-height:150px;
+    border: none;
+    outline: rgb(138,21,56);
+}
+

@@ -6,10 +6,14 @@
     margin: 0;
 }
 
-body {
+body,html {
     scroll-behavior: smooth;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+}
+
+::placeholder{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .header-left img {
@@ -42,11 +46,11 @@ header {
 }
 
 main {
-    background: url('./img/wm-background.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
+        url("img/wm-background.png") no-repeat center center;
     height: 100vh;
     background-size: cover;
     background-position: 10% 60%;
-    background-repeat: no-repeat;
 }
 
 .wm-main-describe {
@@ -60,9 +64,10 @@ main {
 
 .history-main-container {
     background-color: rgba(0, 0, 0, 0.9);
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     padding: 0 5% 0 5%;
+    position: relative;
 }
 
 .history-main-container h2 {
@@ -75,6 +80,7 @@ main {
     border-radius: 20px;
     object-fit: cover;
     object-position: 0 40%;
+   
 }
 
 .history-container {
@@ -82,6 +88,7 @@ main {
     align-items: center;
     gap: 100px;
     margin-top: 50px;
+    
 }
 
 .history-container p {
@@ -151,6 +158,11 @@ main {
 
 }
 
+.headline-video{
+    padding-left:5%;
+}
+
+
 .card:hover img {
     transform: rotateY(180deg);
 }
@@ -160,10 +172,16 @@ main {
 }
 
 .all-countries {
-    background-color: rgb(138,21,56);
+    background:  linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), 
+     rgb(138,21,56);
     padding-bottom:5%;
 }
 
+.all-countries-btn-container{
+    text-align: center;
+    margin-top:40px;
+    display:none;
+}
 
 #all-countries {
     display: flex;
@@ -196,7 +214,8 @@ main {
 
 .history-arrow{
     display:none;
-    margin:700px 30% 100px 30%;
+    margin:700px 30% 0 30%;
+    padding-bottom:30px;
     cursor: pointer;
 }
 
@@ -221,7 +240,8 @@ main {
     border-radius: 20px;
 }
 
-.contact-text button{
+.contact-text button,
+.btn{
     padding: 10px 50px;
     margin: 30px 0px;
     background-color: rgb(138,21,56);
@@ -268,15 +288,19 @@ footer a{
 .imprint{
     display:flex;
     flex-direction: column;
-
 }
 
-.contact-text{
-    transform: translateX(-100vw) translateY(-150px);
+iframe{
+    height:700px;
+    width:100%;
 }
 
-.contact-text.visible{
-    transition: transform 2s ease-in-out;
-    transform: translateX(0) translateY(0);
-
+.video{
+    color:white;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:50px;
+    padding-top:30px;
 }

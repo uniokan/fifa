@@ -7,10 +7,8 @@
     <title>EA Sports</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./img/fifa.png" type="image/x-icon">
-    <script src="script.js"></script>
-    <script src="template.js"></script>
-    <script src="translate.js"></script>
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 
 <body onload="init()">
@@ -96,16 +94,26 @@
     </section>
 
     <section class="all-countries">
-        <h2 class="pd"> Alle Länder Statistiken</h2>
+        <h2 class="pd" id="all-countries-stats"> Alle Länder Statistiken</h2>
         <div class="pd" id="all-countries">
-
         </div>
+        <div class="all-countries-btn-container">
+            <button id="show-more-btn" class="btn" onclick="showMoreCountries()">Mehr Anzeigen</button>
+        </div>
+    </section>
+
+    <section class="video">
+        <h2 class="headline-video">FIFA WM 2002 Finale: Deutschland - Brasilien</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jwTa7XSi5j0?si=9XQBZLnMK86zVtKB"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 
     <section class="contact">
         <div class="contact-text">
             <h3>Für mehr Informationen kannst Du uns gerne kontaktieren!</h3>
-            <button>Kontakt</button>
+            <a href="contact.html"><button>Kontakt</button></a>
         </div>
     </section>
 
@@ -123,6 +131,10 @@
             <a href="https://www.instagram.com/"><img src="img/instagram.png"></a>
         </div>
     </footer>
+
+    <script src="script.js"></script>
+    <script src="template.js"></script>
+    <script src="translate.js"></script>
 </body>
 
 </html>
